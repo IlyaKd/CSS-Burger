@@ -1,0 +1,80 @@
+/* меню для больших экранов*/
+.menu {
+  text-align: right;
+}
+
+.menu__links-item {
+  display: inline-block;
+  color: #333;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu__links-item:hover {
+  text-decoration: underline;
+}
+
+/* бургер иконка */
+.menu__icon {
+  display: none;
+  width: 45px;
+  height: 35px;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.menu__icon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #333;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+}
+
+.menu__icon span:nth-child(1) {
+    top: 0px;
+}
+
+.menu__icon span:nth-child(2) {
+    top: 13px;
+}
+
+.menu__icon span:nth-child(3) {
+    top: 26px;
+}
+
+/* адаптивный верстка */
+@media screen and (max-width: 999px) {
+  .menu__icon {
+    display: inline-block;
+  }
+
+/* выпадаюещее меню */
+  .menu__links {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 52px;
+    background-color: #333;
+    z-index: 1000;
+    overflow: auto;  
+  }
+  
+  .menu__links-item {
+    color: #ffffff;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+
+  }
+}
